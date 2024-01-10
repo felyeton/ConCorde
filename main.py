@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
+from settings import *
 
 # driver = webdriver.Firefox()
 # driver.get("https://www.melihov.tech/concorde/")
@@ -30,10 +31,10 @@ driver.get("https://www.melihov.tech/concorde/")
 sleep(10)
 # elem = driver.find_element(By.NAME, "name")
 login = driver.find_element(By.XPATH,  '//input[@autocomplete="name"]')
-login.send_keys("Мелихов")
+login.send_keys(LOGIN)
 
 password = driver.find_element(By.XPATH,  '//input[@autocomplete="password-current"]')
-password.send_keys("Durak")
+password.send_keys(PASSWORD)
 # elem.send_keys(Keys.ENTER)
 
 go_button = driver.find_element(By.XPATH,  '//b[@class="bt lp"]')
